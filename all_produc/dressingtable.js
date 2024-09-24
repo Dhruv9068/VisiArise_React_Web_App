@@ -14,14 +14,6 @@
       "category": "dressingtable",
       "rating": 4.5,
       "review": 25
-    },
-    {
-      "imageUrl": "/images/dressingtable3.jpg",
-      "title": "Antique Dressing Table",
-      "price": 499,
-      "category": "dressingtable",
-      "rating": 4.7,
-      "review": 30
     }
   ]
   
