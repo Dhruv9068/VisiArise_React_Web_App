@@ -65,7 +65,7 @@ const products = [
     },
     {
         id: 9,
-        name: "White Sofa",
+        name: "Abstract Art",
         imageUrl: "/Product_img/products9.png",
         rating: 4.7,
         price: 55.99,
@@ -73,7 +73,7 @@ const products = [
     },
     {
         id: 10,
-        name: "Yellow Sofa",
+        name: "White Sofa",
         imageUrl: "/Product_img/products10.png",
         rating: 5.0,
         price: 89.99,
@@ -81,7 +81,7 @@ const products = [
     },
     {
         id: 11,
-        name: "Abstract Wall Art",
+        name: "Yellow Sofa",
         imageUrl: "/Product_img/products11.png",
         rating: 4.1,
         price: 23.99,
