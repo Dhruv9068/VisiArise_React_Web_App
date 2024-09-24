@@ -1,9 +1,17 @@
 import { motion } from 'framer-motion';
 import products from '../utils/products'; // Adjust the path as necessary
- 
+import { addToCart } from "../cartSlice";
+import { useDispatch } from "react-redux";
+
 const BestDeals = () => {
+  // const handleAddToCart = (product) => {
+  //   alert(`${product.name} has been added to the cart!`);
+  // };
+
+  const dispatch = useDispatch();
+
   const handleAddToCart = (product) => {
-    alert(`${product.name} has been added to the cart!`);
+    dispatch(addToCart({ product, num: 1 }));  // Adds 1 quantity to the cart
   };
  
   return (
@@ -42,14 +50,13 @@ const BestDeals = () => {
 <span className="ml-2 text-white">{product.reviews}</span>
 </div>
 <button
-              onClick={() => handleAddToCart(product)}
-              className="w-full bg-cyan-500 text-white py-2 rounded hover:bg-purple-700 transition"
-              style={{
-                boxShadow: '0 0 5px rgba(0, 140, 255, 0.8), 0 0 10px rgba(0, 140, 255, 0.8)',
-              }}
->
-              Add to Cart
-</button>
+      onClick={() => handleAddToCart(product)}
+      className="w-full bg-cyan-500 text-white py-2 rounded hover:bg-purple-700 transition"
+      style={{
+        boxShadow: '0 0 5px rgba(0, 140, 255, 0.8), 0 0 10px rgba(0, 140, 255, 0.8)',
+      }}>
+      Add to Cart
+    </button>
 </motion.div>
         ))}
 </div>

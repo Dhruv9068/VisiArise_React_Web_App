@@ -94,7 +94,8 @@ const products = [
         rating: 4.6,
         price: 42.99,
         reviews: 280,
-    },
+    }
+       
   ];
   
   export default products;
