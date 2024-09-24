@@ -1,6 +1,6 @@
 import BannerSection from "./BannerSection";
 import BestDeal from "./BestDeal";
-import FeaturedSection from "./FeaturedSection.jsx";
+// import FeaturedSection from "./FeaturedSection.jsx";
 import Features from "./Features";
 import Footer from "./Footer";
 import Hero from "./Hero";
@@ -15,7 +15,7 @@ const Home = () => {
        <Parallexeff />
        <BestDeal />
        <BannerSection />
-       <FeaturedSection />
+       {/* <FeaturedSection /> */}
        <Footer />
 
        
