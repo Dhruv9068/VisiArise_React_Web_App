@@ -29,5 +29,12 @@
       "price": 1199,
       "category": "laptop",
       "rating": 98
+    },
+     {
+      "imageUrl": "/images/laptop5.jpg",
+      "title": "Apple Laptop",
+      "price": 119900,
+      "category": "laptop",
+      "rating": 99
     }
 ]
