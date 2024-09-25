@@ -1,32 +1,12 @@
 import { motion } from 'framer-motion';
-import PropTypes from 'prop-types'; // Import PropTypes
-
-const products = {
-  watches: [
-    { id: 1, name: 'Watch 1', image: '/Product_img/watch-05.png', price: '$199', rating: 4.5 },
-    { id: 2, name: 'Watch 2', image: '/Product_img/watch-02.jpg', price: '$249', rating: 4.0 },
-    { id: 3, name: 'Watch 3', image: '/Product_img/watch-03.jpg', price: '$299', rating: 4.7 },
-    { id: 4, name: 'Watch 4', image: '/Product_img/watch-04.jpg', price: '$349', rating: 5.0 },
-  ],
-  mobiles: [
-    { id: 1, name: 'Mobile 1', image: '/Product_img/phone1.jpg', price: '$799', rating: 4.8 },
-    { id: 2, name: 'Mobile 2', image: '/Product_img/phone2.png', price: '$899', rating: 4.5 },
-    { id: 3, name: 'Mobile 3', image: '/Product_img/phone3.png', price: '$999', rating: 4.9 },
-    { id: 4, name: 'Mobile 4', image: '/Product_img/phone4.png', price: '$1099', rating: 4.6 },
-  ],
-  laptops: [
-    { id: 1, name: 'Laptop 1', image: '/Product_img/laptop1.jpg', price: '$1199', rating: 4.7 },
-    { id: 2, name: 'Laptop 2', image: '/Product_img/laptop2.jpg', price: '$1299', rating: 4.6 },
-    { id: 3, name: 'Laptop 3', image: '/Product_img/laptop3.jpg', price: '$1399', rating: 4.8 },
-    { id: 4, name: 'Laptop 4', image: '/Product_img/laptop4.jpeg', price: '$1499', rating: 4.9 },
-  ],
-};
+import PropTypes from 'prop-types';
+import otherProducts from '../utils/otherProducts'; // Import otherProducts
 
 const FeaturedSection = () => {
   return (
     <section className="min-h-screen bg-black p-10">
       <h1 className="text-center mb-16 text-6xl font-bold font-serif text-white">
-       Our Featured Category
+        Our Featured Category
       </h1>
 
       {/* Watches */}
@@ -82,16 +62,13 @@ const FeaturedSection = () => {
 
 // Category component with prop validation
 const Category = ({ type }) => {
-  let productsForCategory;
-
-  // Hardcoding products based on type
-  if (type === "watches") {
-    productsForCategory = products.watches;
-  } else if (type === "mobiles") {
-    productsForCategory = products.mobiles;
-  } else if (type === "laptops") {
-    productsForCategory = products.laptops;
-  }
+  // Filter products based on type
+  const productsForCategory = otherProducts.filter(product => {
+    if (type === "watches") return product.id >= 81 && product.id <= 84; // Watches IDs
+    if (type === "mobiles") return product.id >= 91 && product.id <= 94; // Mobiles IDs
+    if (type === "laptops") return product.id >= 71 && product.id <= 74; // Laptops IDs
+    return [];
+  });
 
   const handleAddToCart = (product) => {
     alert(`${product.name} has been added to the cart!`);
@@ -113,7 +90,7 @@ const Category = ({ type }) => {
               className="w-full h-48 object-cover mb-4 rounded-lg"
             />
             <h3 className="text-xl font-bold text-white mb-2">{product.name}</h3>
-            <p className="text-lg font-semibold text-gray-300">{product.price}</p>
+            <p className="text-lg font-semibold text-gray-300">{`$${product.price}`}</p>
             {/* Rating Section */}
             <div className="flex items-center mb-4">
               {Array.from({ length: 5 }, (_, index) => (
@@ -148,7 +125,7 @@ const Category = ({ type }) => {
 
 // Add prop types for the Category component
 Category.propTypes = {
-  type: PropTypes.oneOf(['watches', 'mobiles', 'laptops']).isRequired, // Validate type
+  type: PropTypes.oneOf(['watches', 'mobiles', 'laptops']).isRequired,
 };
 
 export default FeaturedSection;
