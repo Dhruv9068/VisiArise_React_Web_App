@@ -8,6 +8,11 @@ const products = [
         price: 29.99,
         reviews: 245,
         type: "Table", // Product type
+        brand: "VisiFurnish", // New category
+        material: "Wood", // New category
+        color: "Black", // New category
+        weight: "Light", // New category
+        stock: 10, // New category
     },
     {
         id: 2,
@@ -17,6 +22,11 @@ const products = [
         price: 39.99,
         reviews: 130,
         type: "Table", // Product type
+        brand: "VisiNest", // New category
+        material: "Wood", // New category
+        color: "Brown", // New category
+        weight: "Medium", // New category
+        stock: 8, // New category
     },
     {
         id: 3,
@@ -26,6 +36,11 @@ const products = [
         price: 49.99,
         reviews: 310,
         type: "Sofa", // Product type
+        brand: "VisiARrange", // New category
+        material: "Leather", // New category
+        color: "Gray", // New category
+        weight: "Heavy", // New category
+        stock: 5, // New category
     },
     {
         id: 4,
@@ -35,6 +50,11 @@ const products = [
         price: 49.99,
         reviews: 310,
         type: "Sofa", // Product type
+        brand: "VisiFurnish", // New category
+        material: "Fabric", // New category
+        color: "Black", // New category
+        weight: "Medium", // New category
+        stock: 7, // New category
     },
     {
         id: 5,
@@ -44,6 +64,11 @@ const products = [
         price: 19.99,
         reviews: 120,
         type: "Sofa", // Product type
+        brand: "VisiNest", // New category
+        material: "Wood", // New category
+        color: "Brown", // New category
+        weight: "Light", // New category
+        stock: 15, // New category
     },
     {
         id: 6,
@@ -53,6 +78,11 @@ const products = [
         price: 69.99,
         reviews: 500,
         type: "Table", // Product type
+        brand: "VisiARrange", // New category
+        material: "Wood", // New category
+        color: "Gray", // New category
+        weight: "Heavy", // New category
+        stock: 4, // New category
     },
     {
         id: 7,
@@ -62,6 +92,11 @@ const products = [
         price: 22.99,
         reviews: 85,
         type: "Table", // Product type
+        brand: "VisiFurnish", // New category
+        material: "Wood", // New category
+        color: "Brown", // New category
+        weight: "Light", // New category
+        stock: 10, // New category
     },
     {
         id: 8,
@@ -71,6 +106,11 @@ const products = [
         price: 33.99,
         reviews: 205,
         type: "Storage", // Product type
+        brand: "VisiNest", // New category
+        material: "Wood", // New category
+        color: "Black", // New category
+        weight: "Medium", // New category
+        stock: 6, // New category
     },
     {
         id: 9,
@@ -80,6 +120,11 @@ const products = [
         price: 55.99,
         reviews: 315,
         type: "Decor", // Product type
+        brand: "VisiARrange", // New category
+        material: "Canvas", // New category
+        color: "Gray", // New category
+        weight: "Light", // New category
+        stock: 20, // New category
     },
     {
         id: 10,
@@ -89,6 +134,11 @@ const products = [
         price: 89.99,
         reviews: 400,
         type: "Sofa", // Product type
+        brand: "VisiFurnish", // New category
+        material: "Fabric", // New category
+        color: "Gray", // New category
+        weight: "Heavy", // New category
+        stock: 3, // New category
     },
     {
         id: 11,
@@ -98,6 +148,11 @@ const products = [
         price: 23.99,
         reviews: 160,
         type: "Sofa", // Product type
+        brand: "VisiNest", // New category
+        material: "Fabric", // New category
+        color: "Brown", // New category
+        weight: "Medium", // New category
+        stock: 8, // New category
     },
     {
         id: 12,
@@ -107,6 +162,11 @@ const products = [
         price: 42.99,
         reviews: 280,
         type: "Misc", // Product type
+        brand: "VisiARrange", // New category
+        material: "Plastic", // New category
+        color: "Black", // New category
+        weight: "Light", // New category
+        stock: 12, // New category
     }
 ];
 
