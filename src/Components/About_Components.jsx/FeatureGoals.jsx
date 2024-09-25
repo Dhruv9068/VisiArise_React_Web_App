@@ -2,17 +2,12 @@ import { motion } from 'framer-motion';
 
 const FutureGoalsSection = () => {
   const goals = [
-    "Expand our AR technology to enhance more product categories.",
-    "Create partnerships with major e-commerce platforms.",
+    
+    "Broadening Product Range Collaborate with diverse brands to offer wider range of products",
+    "Enhancing User Engagement using interactive & gamification elements",
     "Develop a user-friendly mobile application for AR experiences.",
-    "Implement AI-driven personalization for better user engagement.",
-    "Launch a community platform for user-generated content and reviews.",
-
-    "Expand our AR technology to enhance more product categories.",
-    "Broadening Product Range Collaborate with diverse brands to offer a wider selection of products for users to visualize and interact with.",
-    "Enhancing User EngagementDevelop interactive tools and gamification elements to create a more engaging and enjoyable shopping journey.",
-    "Integrating User Feedback Actively incorporate user feedback to refine our platform, ensuring it meets the evolving needs and preferences of our customers.",
-    "Establishing Industry Leadership Aim to set new industry standards for AR in e-commerce, positioning ourselves as leaders in innovative online shopping solutions."
+    "Integrating User Feedback Actively to refine our platform, ensure evolving needs & preferences",
+    "Establishing Industry Leadership Aim to set new industry standards for AR in e-commerce"
    
   ];
 
