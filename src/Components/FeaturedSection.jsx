@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types'; // Import PropTypes
-import otherproducts from '../utils/otherProducts';
+import otherProducts from '../utils/otherProducts';
 import { addToCart } from './Cart.js';
 
 
