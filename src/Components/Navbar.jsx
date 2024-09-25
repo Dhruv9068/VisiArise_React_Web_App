@@ -1,57 +1,87 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  // Ensure that you correctly extract cartList from the Redux store
-  const cartList = useSelector((state) => state.cart.cartList); // Correctly access cartList here
+  const cartList = useSelector((state) => state.cart.cartList);
 
-  return (
-    <nav className={`bg-gray-900 p-4 shadow-lg transition-all duration-300 ${isOpen ? 'h-screen' : 'h-18'}`}>
-      <div className="max-w-6xl mx-auto flex justify-between items-center">
-        <div className="flex items-center">
-          <img src={`/logo.png`} alt="Logo" className="h-10 mr-2" />
+  useEffect(() => {
+    // Close the nav menu on window resize (above 960px)
+    const handleResize = () => {
+      if (window.innerWidth >= 960) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const navList = (
+    <ul className="mb-4 mt-2 flex flex-col gap-5 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+      <Link to="/" className="text-white hover:text-purple-400 transition duration-300">Home</Link>
+      <Link to="/shopping" className="text-white hover:text-purple-400 transition duration-300">Shopping</Link>
+      <Link to="/about" className="text-white hover:text-purple-400 transition duration-300">About</Link>
+      <Link to="/cart" className="relative flex items-center">
+        <div className="flex items-center justify-center w-10 h-10 bg-purple-600 rounded-full">
+          <i className="fas fa-shopping-cart text-white"></i>
         </div>
-        <div className="hidden md:flex space-x-6">
-          <Link to="/" className="text-white hover:text-purple-400 transition duration-300">Home</Link>
-          <Link to="/shopping" className="text-white hover:text-purple-400 transition duration-300">Shopping</Link>
-          <Link to="/about" className="text-white hover:text-purple-400 transition duration-300">About</Link>
-          <Link to="/cart">
-        <button className="bg-purple-600 text-white px-2 py-1 rounded hover:bg-blue-500 transition duration-300">
-          Visualize Cart
-        </button>
-      </Link>
-      <Link to="/cart" className="text-white hover:text-purple-400 transition duration-300 relative">
-        <i className="fas fa-shopping-cart"></i>
         {cartList.length > 0 && (
-          <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full text-xs px-1">
+          <span className="absolute top-0 right-0 transform translate-x-1 -translate-y-1 bg-red-500 text-white rounded-full text-xs px-1 py-0.5">
             {cartList.length}
           </span>
         )}
       </Link>
+      <button className="bg-blue-500 text-white px-2 py-1 rounded hover:bg-purple-500 transition duration-300">
+        Visualise Your Cart
+      </button>
+    </ul>
+  );
 
+  return (
+    <nav className="bg-gray-900 p-4 shadow-lg transition-all duration-300 sticky top-0 z-50"> {/* Changed z-10 to z-50 */}
+      <div className="max-w-6xl mx-auto flex justify-between items-center">
+        {/* Logo */}
+        <div className="flex items-center">
+          <img src="/logo.png" alt="Logo" className="h-10 mr-2" />
         </div>
-        <div className="md:hidden flex items-center">
-          <Link to="/cart" className="mr-4 text-white hover:text-purple-400 transition duration-300">
-            <i className="fas fa-shopping-cart"></i>
+
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex space-x-6">
+          {navList}
+        </div>
+
+        {/* Mobile Menu - Cart Icon and Toggle Button */}
+        <div className="lg:hidden flex items-center space-x-4 relative">
+          <Link to="/cart" className="relative flex items-center">
+            <div className="flex items-center justify-center w-10 h-10 bg-purple-600 rounded-full">
+              <i className="fas fa-shopping-cart text-white"></i>
+            </div>
+            {cartList.length > 0 && (
+              <span className="absolute top-0 right-0 transform translate-x-1 -translate-y-1 bg-red-500 text-white rounded-full text-xs px-1 py-0.5">
+                {cartList.length}
+              </span>
+            )}
           </Link>
+
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`text-white focus:outline-none transform transition-transform duration-300 ${isOpen ? 'rotate-90' : ''}`}
+            className="text-white focus:outline-none transform transition-transform duration-300"
           >
-            <i className={`fas fa-${isOpen ? 'times' : 'bars'}`}></i>
+            {isOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
           </button>
         </div>
       </div>
-      <div className={`absolute top-16 left-0 right-0 bg-gray-800 transform transition-transform duration-300 ${isOpen ? 'h-screen' : 'h-0 overflow-hidden'}`}>
-        <div className={`flex flex-col justify-center items-center transition-transform duration-300`}>
+
+      {/* Mobile Menu */}
+      <div className={`lg:hidden transition-all duration-300 ${isOpen ? 'block' : 'hidden'} mt-2`}>
+        <div className="flex flex-col justify-center items-center space-y-4">
           <Link to="/" className="block text-white py-2 px-4 hover:bg-purple-600 transition duration-300">Home</Link>
           <Link to="/shopping" className="block text-white py-2 px-4 hover:bg-purple-600 transition duration-300">Shopping</Link>
           <Link to="/about" className="block text-white py-2 px-4 hover:bg-purple-600 transition duration-300">About</Link>
           <Link to="/cart">
-            <button className="bg-purple-600 text-white px-2 py-1 rounded hover:bg-blue-500 transition duration-300 w-3/4 mt-4">
+            <button className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-blue-500 transition duration-300">
               Visualize Cart
             </button>
           </Link>
