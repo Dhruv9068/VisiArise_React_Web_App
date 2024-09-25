@@ -1,4 +1,3 @@
-// src/app/features/cart/cartSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 
 const storedCartList =
