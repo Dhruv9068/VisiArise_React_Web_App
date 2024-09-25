@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types'; // Import PropTypes
-import otherproducts from '../utils/otherproducts';
 
+
+=======
+import otherProducts from '../utils/otherProducts';
+import { addToCart } from './Cart.js';
+>>>>>>> abdd4b270e19c463e7ac4da5394e8f5eb3a9902c
 
 
 const FeaturedSection = () => {
