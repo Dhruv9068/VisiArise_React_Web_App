@@ -28,6 +28,12 @@ const SolutionSection = () => {
         <p className="text-lg leading-relaxed">
           Our Augmented Reality platform allows users to visualize products in their own environments with ease. By utilizing cutting-edge technology, we empower customers to interact with items like furniture and decor, enabling them to make confident decisions. This immersive experience not only enhances customer satisfaction but also reduces the likelihood of returns, fostering a more engaging shopping journey.
         </p>
+        <p className="text-lg leading-relaxed">
+      "Users can assess size, style, and how things align,
+Transforming their shopping into a journey divine.
+By placing and manipulating 3D decor,
+We empower their choices, making shopping a chore no more!"
+        </p>
       </div>
 
       {/* CSS for neon text animation */}

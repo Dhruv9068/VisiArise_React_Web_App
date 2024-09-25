@@ -2,8 +2,8 @@
 const otherProducts = [
     { 
         id: 81, 
-        name: 'Watch 1', 
-        image: '/Product_img/watch-05.png', 
+        name: 'Royal Smart Watch', 
+        image: '/Product_img/watch-01.png', 
         price: 199, 
         rating: 4.5, 
         brand: 'Brand A', 
@@ -14,7 +14,7 @@ const otherProducts = [
     },
     { 
         id: 82, 
-        name: 'Watch 2', 
+        name: 'Digital Watch', 
         image: '/Product_img/watch-02.jpg', 
         price: 249, 
         rating: 4.0, 
@@ -26,7 +26,7 @@ const otherProducts = [
     },
     { 
         id: 83, 
-        name: 'Watch 3', 
+        name: 'Silvery Watch', 
         image: '/Product_img/watch-03.jpg', 
         price: 299, 
         rating: 4.7, 
@@ -38,7 +38,7 @@ const otherProducts = [
     },
     { 
         id: 84, 
-        name: 'Watch 4', 
+        name: 'Matte Black Watch', 
         image: '/Product_img/watch-04.jpg', 
         price: 349, 
         rating: 5.0, 
@@ -50,7 +50,7 @@ const otherProducts = [
     },
     { 
         id: 91, 
-        name: 'Mobile 1', 
+        name: 'Xiaomi Pro', 
         image: '/Product_img/phone1.jpg', 
         price: 799, 
         rating: 4.8, 
@@ -62,7 +62,7 @@ const otherProducts = [
     },
     { 
         id: 92, 
-        name: 'Mobile 2', 
+        name: 'One Plus', 
         image: '/Product_img/phone2.png', 
         price: 899, 
         rating: 4.5, 
@@ -74,7 +74,7 @@ const otherProducts = [
     },
     { 
         id: 93, 
-        name: 'Mobile 3', 
+        name: 'Oppo K10', 
         image: '/Product_img/phone3.png', 
         price: 999, 
         rating: 4.9, 
@@ -86,7 +86,7 @@ const otherProducts = [
     },
     { 
         id: 94, 
-        name: 'Mobile 4', 
+        name: 'Oppo A51', 
         image: '/Product_img/phone4.png', 
         price: 1099, 
         rating: 4.6, 
@@ -98,7 +98,7 @@ const otherProducts = [
     },
     { 
         id: 71, 
-        name: 'Laptop 1', 
+        name: 'Pro Art Lenovo', 
         image: '/Product_img/laptop1.jpg', 
         price: 1199, 
         rating: 4.7, 
@@ -110,7 +110,7 @@ const otherProducts = [
     },
     { 
         id: 72, 
-        name: 'Laptop 2', 
+        name: 'Apple Mac Book', 
         image: '/Product_img/laptop2.jpg', 
         price: 1299, 
         rating: 4.6, 
@@ -122,7 +122,7 @@ const otherProducts = [
     },
     { 
         id: 73, 
-        name: 'Laptop 3', 
+        name: 'Hp Pro', 
         image: '/Product_img/laptop3.jpg', 
         price: 1399, 
         rating: 4.8, 
@@ -134,7 +134,7 @@ const otherProducts = [
     },
     { 
         id: 74, 
-        name: 'Laptop 4', 
+        name: '12th Gen i5', 
         image: '/Product_img/laptop4.jpeg', 
         price: 1499, 
         rating: 4.9, 

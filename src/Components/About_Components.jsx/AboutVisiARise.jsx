@@ -79,7 +79,8 @@ const AboutVisiarise = () => {
           transition={{ duration: 1, delay: 0.3 }}
           style={{ marginBottom: '20px' }}
         >
-          Welcome to VisiARise, where your shopping experience transcends the ordinary! Imagine not just browsing through endless product listings, but **actually seeing how they fit into your life** before making a purchase. Our cutting-edge Augmented Reality (AR) platform enables you to visualize products like furniture, decor, and electronics right in your home. 
+          "Our AR experience clears the doubt,
+          Letting users visualize, without a route." 
           <br />
           Why settle for imagination when you can have reality? **Transform your space with confidence**—try it today and experience a new way of shopping that puts you in control!
         </motion.p>

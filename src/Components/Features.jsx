@@ -3,10 +3,10 @@
 import { motion } from 'framer-motion'; // Make sure to install framer-motion
 
 const featuresData = [
-  { icon: '/icon.png', title: 'Feature 1', text: 'Description for feature 1.' },
-  { icon: '/icon.png', title: 'Feature 2', text: 'Description for feature 2.' },
-  { icon: '/icon.png', title: 'Feature 3', text: 'Description for feature 3.' },
-  { icon: '/icon.png', title: 'Feature 4', text: 'Description for feature 4.' },
+  { icon: '/icon.png', title: 'Try Before You Buy', text: 'Visualize product in their room space before purchasing, builds trust in the product' },
+  { icon: '/icon.png', title: 'Product-Specific AR Visualization', text: "View exact product you've added, enhance personalization" },
+  { icon: '/icon.png', title: 'AR Accessibility', text: 'Cross platform AR accessibilities without needing expensive handsets' },
+  { icon: '/icon.png', title: 'Real-World Product Placement', text: 'View actual size & scale of products gives confidence to make better purchasing decisions' },
 ];
 
 const Features = () => {

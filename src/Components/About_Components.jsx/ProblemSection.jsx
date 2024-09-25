@@ -14,8 +14,9 @@ const ProblemSection = () => {
           </span>
         </h2>
         <p className="text-lg leading-relaxed">
-          In today’s fast-paced digital landscape, users often struggle to visualize products in their real environments before making a purchase. This can lead to uncertainty and dissatisfaction, especially when it comes to items like furniture, art, and other home decor. Our goal is to bridge this gap by providing an Augmented Reality experience that allows users to interact with products virtually, ensuring they make informed decisions and enhancing their overall shopping experience.
-        </p>
+  In today’s fast-paced digital world, customers often find it challenging to visualize products in their homes, leading to uncertainty and dissatisfaction—especially with furniture and decor. Our mission is to bridge this gap with an immersive Augmented Reality experience that allows users to interact with 3D models in their own spaces. This interactive journey empowers shoppers to confidently assess size, style, and fit, transforming their purchasing experience into a personalized adventure.
+</p>
+
       </div>
 
       {/* Right Side Image */}

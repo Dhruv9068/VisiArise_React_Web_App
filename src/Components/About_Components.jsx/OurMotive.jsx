@@ -2,11 +2,12 @@ import { motion } from 'framer-motion';
 
 const OurMotiveSection = () => {
   const motives = [
-    "Enhance user experience through immersive technology.",
-    "Empower customers to visualize products in their real-world settings.",
-    "Reduce purchase uncertainty and increase satisfaction.",
-    "Foster creativity in home decor and design.",
-    "Support sustainable shopping practices with better decision-making."
+    "Real-world Visualization platform to seamlessly visualize products in their own spaces",
+    "Elevating Customer Satisfaction that alleviates uncertainty & hesitation.",
+    "Informed Decision-Making & interactive engagement with 3D models boost visual confidence",
+    "Minimizing Returns & clear visualizations lead to better decisions.",
+    "Revolutionizing online shopping experience & Foster creativity by integrating AR."
+   
   ];
 
   return (
