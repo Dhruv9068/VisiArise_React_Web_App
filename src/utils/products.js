@@ -1,11 +1,13 @@
+// products.js - Product Data
 const products = [
     {
         id: 1,
         name: "Royal Black Table",
-        imageUrl: "/Product_img/products1.png", // Ensure correct image path
+        imageUrl: "/Product_img/products1.png",
         rating: 4.5,
         price: 29.99,
         reviews: 245,
+        type: "Table", // Product type
     },
     {
         id: 2,
@@ -14,6 +16,7 @@ const products = [
         rating: 4.2,
         price: 39.99,
         reviews: 130,
+        type: "Table", // Product type
     },
     {
         id: 3,
@@ -22,6 +25,7 @@ const products = [
         rating: 5.0,
         price: 49.99,
         reviews: 310,
+        type: "Sofa", // Product type
     },
     {
         id: 4,
@@ -30,6 +34,7 @@ const products = [
         rating: 5.0,
         price: 49.99,
         reviews: 310,
+        type: "Sofa", // Product type
     },
     {
         id: 5,
@@ -38,6 +43,7 @@ const products = [
         rating: 4.0,
         price: 19.99,
         reviews: 120,
+        type: "Sofa", // Product type
     },
     {
         id: 6,
@@ -46,6 +52,7 @@ const products = [
         rating: 4.8,
         price: 69.99,
         reviews: 500,
+        type: "Table", // Product type
     },
     {
         id: 7,
@@ -54,6 +61,7 @@ const products = [
         rating: 3.9,
         price: 22.99,
         reviews: 85,
+        type: "Table", // Product type
     },
     {
         id: 8,
@@ -62,6 +70,7 @@ const products = [
         rating: 4.3,
         price: 33.99,
         reviews: 205,
+        type: "Storage", // Product type
     },
     {
         id: 9,
@@ -70,6 +79,7 @@ const products = [
         rating: 4.7,
         price: 55.99,
         reviews: 315,
+        type: "Decor", // Product type
     },
     {
         id: 10,
@@ -78,6 +88,7 @@ const products = [
         rating: 5.0,
         price: 89.99,
         reviews: 400,
+        type: "Sofa", // Product type
     },
     {
         id: 11,
@@ -86,6 +97,7 @@ const products = [
         rating: 4.1,
         price: 23.99,
         reviews: 160,
+        type: "Sofa", // Product type
     },
     {
         id: 12,
@@ -94,8 +106,8 @@ const products = [
         rating: 4.6,
         price: 42.99,
         reviews: 280,
+        type: "Misc", // Product type
     }
-       
-  ];
-  
-  export default products;
+];
+
+export default products;
