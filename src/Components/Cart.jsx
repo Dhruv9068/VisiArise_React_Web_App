@@ -69,8 +69,8 @@ const Cart = () => {
                             <Col xs={12} sm={9} className="cart-details">
                               <h3 className="font-bold text-lg">{item.name}</h3>
                               <h4 className="text-gray-400">
-                                ₹{item.price.toFixed(2)} * {item.qty}
-                                <span className="ml-2 text-white">₹{productQty.toFixed(2)}</span>
+                                ${item.price.toFixed(2)} * {item.qty}=
+                                <span className="ml-2 text-white">${productQty.toFixed(2)}</span>
                               </h4>
                             </Col>
                             <Col xs={12} sm={3} className="cartControl flex items-center">
@@ -106,7 +106,7 @@ const Cart = () => {
                 <h2 className="text-xl">Cart Summary</h2>
                 <div className="flex justify-between">
                   <h4>Total Price :</h4>
-                  <h3>₹{totalPrice.toFixed(2)}</h3>
+                  <h3>${totalPrice.toFixed(2)}</h3>
                 </div>
                 <button className="bg-green-600 text-white p-2 rounded w-full mt-4 transition-transform duration-300 hover:bg-green-700">
                   Checkout
