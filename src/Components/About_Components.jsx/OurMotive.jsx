@@ -2,11 +2,11 @@ import { motion } from 'framer-motion';
 
 const OurMotiveSection = () => {
   const motives = [
-    "Real-world Visualization platform to seamlessly visualize products in their own spaces",
-    "Elevating Customer Satisfaction that alleviates uncertainty & hesitation.",
-    "Informed Decision-Making & interactive engagement with 3D models boost visual confidence",
-    "Minimizing Returns & clear visualizations lead to better decisions.",
-    "Revolutionizing online shopping experience & Foster creativity by integrating AR."
+    "Real-world Visualization : Provides seamless visualization of products in their own spaces.",
+    "Elevating Customer Satisfaction : Try out before buy reduces uncertainty & hesitation.",
+    "Informed Decision-Making : As interactive engagement with 3D models boost visual confidence.",
+    "Minimizing Returns : Clear visualizations lead to better decisions.",
+    "Revolutionizing online shopping experience : Foster creativity by integrating AR."
    
   ];
 
