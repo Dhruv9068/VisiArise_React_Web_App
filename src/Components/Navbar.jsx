@@ -78,8 +78,8 @@ const Navbar = () => {
       <div className={`lg:hidden transition-all duration-300 ${isOpen ? 'block' : 'hidden'} mt-2`}>
         <div className="flex flex-col justify-center items-center space-y-4">
           <Link to="/" className="block text-white py-2 px-4 hover:bg-purple-600 transition duration-300">Home</Link>
-          <Link to="/shopping" className="block text-white py-2 px-4 hover:bg-purple-600 transition duration-300">Shopping</Link>
           <Link to="/about" className="block text-white py-2 px-4 hover:bg-purple-600 transition duration-300">About</Link>
+          <Link to="/shopping" className="block text-white py-2 px-4 hover:bg-purple-600 transition duration-300">Shopping</Link>
           <Link to="/cart">
             <button className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-blue-500 transition duration-300">
               Visualize Cart
