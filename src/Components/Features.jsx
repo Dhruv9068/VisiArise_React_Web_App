@@ -4,9 +4,9 @@ import { motion } from 'framer-motion'; // Make sure to install framer-motion
 
 const featuresData = [
   { icon: '/icon.png', title: 'Try Before You Buy', text: 'Visualize product in their room space before purchasing, builds trust in the product' },
-  { icon: '/icon.png', title: 'Product-Specific AR Visualization', text: "View exact product you've added, enhance personalization" },
+  { icon: '/icon.png', title: 'Product-Specific Visualization', text: "View exact product you've added, enhance personalization" },
   { icon: '/icon.png', title: 'AR Accessibility', text: 'Cross platform AR accessibilities without needing expensive handsets' },
-  { icon: '/icon.png', title: 'Real-World Product Placement', text: 'View actual size & scale of products gives confidence to make better purchasing decisions' },
+  { icon: '/icon.png', title: 'Product Placement', text: 'Real world experience to view actual products give confidence' },
 ];
 
 const Features = () => {
