@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import otherProducts from '../utils/otherProducts'; // Import otherProducts
+import { addToCart } from '../cartSlice';
 
+import { useDispatch } from 'react-redux';
 const FeaturedSection = () => {
   return (
     <section className="min-h-screen bg-black p-10">
@@ -69,11 +71,13 @@ const Category = ({ type }) => {
     if (type === "laptops") return product.id >= 71 && product.id <= 74; // Laptops IDs
     return [];
   });
+  const dispatch = useDispatch();
 
   const handleAddToCart = (product) => {
+    dispatch(addToCart({ product, num: 1 }));
     alert(`${product.name} has been added to the cart!`);
   };
-
+  
   return (
     <div className="mb-20">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -85,7 +89,7 @@ const Category = ({ type }) => {
             transition={{ type: 'spring', stiffness: 300 }}
           >
             <img
-              src={product.image}
+              src={product.imageUrl}
               alt={product.name}
               className="w-full h-48 object-cover mb-4 rounded-lg"
             />
