@@ -7,6 +7,7 @@ const firebaseConfig = {
   authDomain: "login-778ef.firebaseapp.com",
   projectId: "login-778ef",
   storageBucket: "login-778ef.appspot.com",
+  url:"https://console.firebase.google.com/project/login-778ef/database/login-778ef-default-rtdb/data/~2F",
   messagingSenderId: "418877569291",
   appId: "1:418877569291:web:f035309a989c9998de4a0e"
 };

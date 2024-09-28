@@ -3,6 +3,11 @@ import Navbar from "./Navbar";
 import { doSignInWithEmailAndPassword, doSignInWithGoogle, doSignInWithGithub } from "../firebase/auth";
 import { useAuth } from "../contexts/authContext/index";
 import { Navigate } from "react-router-dom";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+// import { auth } from '../firebase/firebase';
+
+
 
 const Login = () => {
    const {userLoggedin}= useAuth()
@@ -11,15 +16,30 @@ const Login = () => {
    const [password, setPassword] = useState('');
    const [isSigningIn, setIsSigningIn] = useState(false);
    const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate();
 
    const onSubmit = async(e)=>{
     e.preventDefault();
 
     if(!isSigningIn){
         setIsSigningIn(true);
-        await doSignInWithEmailAndPassword(email, password);
+        await doSignInWithEmailAndPassword(email, password)
+        navigate('/');  // Redirect to home after login
+    }else{
+        setErrorMessage(errorMessage);
+      
     }
    }
+
+  //  const handleLogin = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     await auth.signInWithEmailAndPassword(email, password);
+  //     navigate('/');  // Redirect to home after login
+  //   } catch (err) {
+  //     setError(err.message);
+  //   }
+  // };
 
    const onGoogleSignIn = (e)=>{
     e.preventDefault();
@@ -42,6 +62,10 @@ const Login = () => {
         });
     }
    };
+
+  
+
+ 
 
     return (
         <>
@@ -89,9 +113,9 @@ const Login = () => {
                 type="submit"
                 disabled= {isSigningIn}
                 onSubmit={onSubmit}
-                className={`w-full py-2 rounded-md bg-neonPurple text-white font-bold hover:bg-neonBlue transition duration-300 animate_animated animate_bounce ${isSigningIn}`}
+                className={`w-full py-2 rounded-md bg-neonPurple text-white font-bold hover:bg-neonBlue transition duration-300 animate_animated animate_bounce `}
               >
-                {isSigningIn ? 'Signing In...' : 'Sign In '}
+                {/* {isSigningIn ? 'Signing In...' : 'Sign In '} */}
                 Login 
               </button>
             </div>

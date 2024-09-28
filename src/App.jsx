@@ -39,8 +39,12 @@ const ProtectedRoute = () => {
     // User is still loading
     return <div>Loading...</div>;
   }
+  if (!user) {
+    return <Navigate to="/login" />;
+  }
 
   return user ? <Navigate to="/home" /> : <Navigate to="/signup" />;
 };
+
 
 export default App;

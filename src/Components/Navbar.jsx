@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { useAuth } from "../contexts/authContext/index";
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const cartList = useSelector((state) => state.cart.cartList);
@@ -123,3 +124,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
